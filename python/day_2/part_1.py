@@ -19,7 +19,6 @@ for line in lines:
     g_number = int(''.join([i for i in gamenumber if i.isdigit()]).strip(' '))
     cube_games = fullgame.split(";")
     for game in cube_games:
-        possible = False
         cubes = game.split(",")        
         for hand in cubes:
             color = ''.join([i for i in hand if not i.isdigit()]).strip(' ')
