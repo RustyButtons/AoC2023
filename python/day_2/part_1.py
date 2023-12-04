@@ -27,10 +27,8 @@ for line in lines:
             if is_too_high(color, number):
                 g_number = 0
                 break
-            else:
-                possible = True
-    if possible:
-        total_possible = total_possible + g_number
+            
+    total_possible = total_possible + g_number
 
 print(total_possible)
 
