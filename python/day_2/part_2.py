@@ -5,15 +5,14 @@ total_power = 0
 for line in lines:
     gamenumber, fullgame = line.split(":")
     cube_games = fullgame.split(";")
-    power = 1
     red = 0
     green = 0
     blue = 0
     for game in cube_games:
         cubes = game.split(",")
         for hand in cubes:
-            color = ''.join([i for i in hand if not i.isdigit()]).strip(' ')
-            number = int(''.join([i for i in hand if i.isdigit()]).strip(' '))
+            color = "".join([i for i in hand if not i.isdigit()]).strip(" ")
+            number = int("".join([i for i in hand if i.isdigit()]).strip(" "))
             if color == "red":
                 red = max(number, red)
             if color == "green":
