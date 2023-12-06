@@ -63,21 +63,21 @@ def check_adjacents(lines: list, index: int, value: int) -> bool:
 
     return (
         index + 1 < len(lines)
-        and lines[index + 1][value] != "."
+        and is_symbol(lines[index + 1][value])
         or index - 1 > 0
-        and lines[index - 1][value] != "."
+        and is_symbol(lines[index - 1][value])
         or index + 1 < len(lines)
         and value + 1 < len(lines[index])
-        and lines[index + 1][value + 1] != "."
+        and is_symbol(lines[index + 1][value + 1])
         or index + 1 < len(lines)
         and value - 1 > 0
-        and lines[index + 1][value - 1] != "."
+        and is_symbol(lines[index + 1][value - 1])
         or index - 1 > 0
         and value + 1 < len(lines[index])
-        and lines[index - 1][value + 1] != "."
+        and is_symbol(lines[index - 1][value + 1])
         or index - 1 > 0
         and value - 1 > 0
-        and lines[index - 1][value - 1] != "."
+        and is_symbol(lines[index - 1][value - 1])
         or value + 1 < len(lines[index])
         and is_symbol(lines[index][value + 1])
         or value - 1 > 0
